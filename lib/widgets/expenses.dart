@@ -24,7 +24,6 @@ class _ExpensesState extends State<Expenses> {
         date: DateTime.now(),
         category: Category.leisure),
   ];
-
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
       context: context,
