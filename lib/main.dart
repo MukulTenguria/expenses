@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter/services.dart'; //it is use to lock the screen orientation of our app
 import 'package:expenses_tracker/widgets/expenses.dart';
 
 var kColorScheme = ColorScheme.fromSeed(
@@ -9,6 +10,11 @@ var KDarkColorScheme = ColorScheme.fromSeed(
   seedColor: const Color.fromARGB(255, 5, 99, 125),
 );
 void main() {
+  // WidgetsFlutterBinding.ensureInitialized();
+  // //this is required to make sure that locking the orientation and then running the app work as intended
+  // SystemChrome.setPreferredOrientations([
+  //   DeviceOrientation.portraitUp,
+  // ]).then((fn) {
   runApp(
     MaterialApp(
       home: const Expenses(),
@@ -65,4 +71,5 @@ void main() {
       // themeMode: ThemeMode.system,
     ),
   );
+  // });
 }
